@@ -146,7 +146,7 @@ lazy val rainierTrace = project.
 // documentation modules
 
 lazy val rainierDocs = project.
-  in(file("docs")).
+  in(file("rainier-docs")).
   settings(name := "rainier-docs").
   enablePlugins(MdocPlugin).
   dependsOn(
@@ -155,7 +155,6 @@ lazy val rainierDocs = project.
   ).
   settings(commonSettings).
   settings(
-   mdocIn := new java.io.File("rainier-docs"),
    mdocVariables := Map(
      "VERSION" -> version.value
    )
